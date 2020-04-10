@@ -19,4 +19,4 @@ const ArticleSchema = new Schema({
   },
 });
 
-export const ProjectModel = model("Project", ArticleSchema);
+export const ArticleModel = model("Article", ArticleSchema);
