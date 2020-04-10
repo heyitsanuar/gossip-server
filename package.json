@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/dist/app.js",
+    "start": "node dist/app.js",
     "dev": "nodemon src/app/bin/www.ts",
     "build": "tsc -p .",
-    "heroku-postbuild": "echo Skip build on Heroku"
+    "heroku-postbuild": "node dist/app.js"
   },
   "author": "",
   "license": "ISC",
