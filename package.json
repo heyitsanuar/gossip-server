@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/app.js",
+    "start": "node dist/app/app.js",
     "dev": "nodemon src/app/bin/www.ts",
     "build": "tsc -p .",
     "heroku-postbuild": "npm run build"
