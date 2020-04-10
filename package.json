@@ -7,7 +7,7 @@
     "start": "node dist/app.js",
     "dev": "nodemon src/app/bin/www.ts",
     "build": "tsc -p .",
-    "heroku-postbuild": "node dist/app.js"
+    "heroku-postbuild": "tsc -p ."
   },
   "author": "",
   "license": "ISC",
