@@ -9,6 +9,11 @@ const SongSchema = new Schema({
     type: Number,
     required: true,
   },
+  singer: {
+    type: Schema.Types.ObjectId,
+    ref: "Singer",
+    required: true,
+  },
 });
 
-export const SongModel = model("Song", SongSchema);
+export const Song = model("Song", SongSchema);
