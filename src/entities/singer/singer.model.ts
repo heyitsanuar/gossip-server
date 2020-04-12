@@ -1,5 +1,10 @@
 import { Schema, model } from "mongoose";
 
+export interface ISinger {
+  name: string;
+  lastName: string;
+}
+
 const SingerSchema = new Schema({
   name: {
     type: String,

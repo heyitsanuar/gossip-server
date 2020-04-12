@@ -7,7 +7,7 @@ const category = new CategoryController();
 
 CategoryRoutes.get("/", async (req: Request, res: Response) => {
   try {
-    const categoryResponse = await category.getCategories();
+    const categoryResponse: APIResponse = await category.getCategories();
 
     res.status(categoryResponse.status).send(categoryResponse.data);
   } catch (error) {
@@ -19,7 +19,7 @@ CategoryRoutes.get("/:id", async (req: Request, res: Response) => {
   const { id } = req.params;
 
   try {
-    const categoryResponse = await category.getCategoryById(id);
+    const categoryResponse: APIResponse = await category.getCategoryById(id);
 
     res.status(categoryResponse.status).send(categoryResponse.data);
   } catch (error) {
@@ -29,7 +29,7 @@ CategoryRoutes.get("/:id", async (req: Request, res: Response) => {
 
 CategoryRoutes.post("/", async (req: Request, res: Response) => {
   try {
-    const categoryResponse = await category.createCategory(req.body);
+    const categoryResponse: APIResponse = await category.createCategory(req.body);
 
     res.status(categoryResponse.status).send(categoryResponse.data);
   } catch (error) {
@@ -41,7 +41,7 @@ CategoryRoutes.patch("/:id", async (req: Request, res: Response) => {
   const { id } = req.params;
 
   try {
-    const categoryResponse = await category.updateCategory(req.body, id);
+    const categoryResponse: APIResponse = await category.updateCategory(req.body, id);
 
     res.status(categoryResponse.status).send(categoryResponse.data);
   } catch (error) {
@@ -53,7 +53,7 @@ CategoryRoutes.delete("/:id", async (req: Request, res: Response) => {
   const { id } = req.params;
 
   try {
-    const categoryResponse = await category.removeCategory(id);
+    const categoryResponse: APIResponse = await category.removeCategory(id);
 
     res.status(categoryResponse.status).send(categoryResponse.data || categoryResponse.message);
   } catch (error) {
