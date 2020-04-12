@@ -8,6 +8,7 @@ const { AppController } = require("../app.controller");
 const dbClient = new DBClient({
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  useFindAndModify: false,
 });
 
 dbClient.start(() => {

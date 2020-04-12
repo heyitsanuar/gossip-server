@@ -1,5 +1,11 @@
 import { Schema, model } from "mongoose";
 
+export interface ICategory {
+  title: string;
+  order: number;
+  isActive: boolean;
+}
+
 const CategorySchema = new Schema({
   title: {
     type: String,
